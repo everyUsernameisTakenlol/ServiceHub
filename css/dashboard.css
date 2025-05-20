@@ -1,0 +1,399 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f3f4f6;
+    overflow: hidden; /* Prevent scrolling on the body */
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    font-family: 'Montserrat';
+}
+
+/* Header */
+header {
+    height: 12%;
+    background-color: #FF4B2B;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .search-bar {
+    flex: 1;
+    margin: 0 2rem;
+}
+
+header input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+header .profile {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 70px); /* Adjust height for header */
+    overflow-y: auto; /* Enable vertical scrolling only in the main content */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    float: left; 
+}
+
+/* Sidebar Menu List */
+.sidebar ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FF4B2B;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto; /* Allows scrolling inside the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #ddd;
+    border-radius: 24px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    text-align: center;
+    background: linear-gradient(135deg, #FF4B2B, #FF774C);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero-banner h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.top-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 300px;
+    flex: 1 1 calc(33.33% - 1.5rem); /* Ensure 3 cards per row */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 120px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: #f3f3f3;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #FF4B2B;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.learn-more {
+    width: 90%;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF4B2B; /* Text color red */
+    border: 2px solid #FF4B2B; /* Border color red */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-color: white; /* Background color white */
+}
+
+.learn-more:hover {
+    background: #FF4B2B; /* Background color red on hover */
+    color: white; /* Text color white on hover */
+    border-color: #FF4B2B; /* Border stays red on hover */
+}
+
+
+/* Categories */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.category-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.category-card img {
+    width: 80px;
+}
+
+.category-card h3 {
+    margin: 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%; /* Set the width to 50% of the screen */
+    max-width: 450px; /* Limit the maximum width to 400px */
+    height: auto; /* Let the height adjust based on the content */
+    padding: 20px; /* Padding inside the modal */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #FF4B2B;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border: 1px solid #FF4B2B; /* Explicitly set the border color to #FF4B2B */
+    box-shadow: 0 0 5px rgba(255, 75, 43, 0.5); /* Optional: keeps the glow effect */
+    outline: none; /* Removes the default focus outline */
+}
+
+
+
+form button {
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF4B2B;
+    border: 2px solid #FF4B2B;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer; /* Add cursor to indicate it's clickable */
+}
+
+form button:hover {
+    background: #FF4B2B;
+    color: white;
+}
+
+
+/* Book Now Button */
+.book-now {
+    width: 90%;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF4B2B; /* Text color red */
+    border: 2px solid #FF4B2B; /* Border color red */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-color: white; /* Background color white */
+}
+
+.book-now:hover {
+    background: #FF4B2B; /* Background color red on hover */
+    color: white; /* Text color white on hover */
+    border-color: #FF4B2B; /* Border stays red on hover */
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    /* margin-top: 11px; */
+    font-size: 35px;
+    
+}
+
+img{
+    margin-bottom: 9px;
+}
+
+.assign-btn.disabled {
+    background-color: #d3d3d3; /* Light gray */
+    color: #888888; /* Dark gray text */
+    cursor: not-allowed; /* Disabled cursor */
+    border: 2px solid #d3d3d3;
+}
+
+
+table{
+    font-size: 16px;
+}

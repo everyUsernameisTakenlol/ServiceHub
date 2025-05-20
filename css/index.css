@@ -1,0 +1,83 @@
+/* Center the container */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body, html {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+.selection-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+    width: 100%;
+    max-width: 500px; /* Optional: limit the width */
+}
+
+/* Align h1 text and image horizontally */
+h1 {
+    font-weight: bold;
+    color: #FF4B2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -10px; Adjust as needed */
+}
+
+/* h1 img {
+    margin-right: 10px; /* Add spacing between the image and text */
+    .book-now {
+        width: 100%;
+        text-decoration: none;
+        font-weight: bold;
+        color: #FF4B2B; /* Text color red */
+        border: 2px solid #FF4B2B; /* Border color red */
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: background 0.3s ease, color 0.3s ease;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        background-color: white; /* Background color white */
+    }
+    
+    .book-now:hover {
+        background: #FF4B2B; /* Background color red on hover */
+        color: white; /* Text color white on hover */
+        border-color: #FF4B2B; /* Border stays red on hover */
+    }
+    
+
+.role-option {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.submit-btn {
+    background-color: #FF4B2B;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #e24a2b;
+}
+
+img {
+    /* Add styles for images if needed */
+    margin-bottom: 15px;
+}
